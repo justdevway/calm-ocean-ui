@@ -1,8 +1,8 @@
 {
-  "name": "arts-theme-ui",
+  "name": "calm-ocean-theme",
   "theme": "ui",
-  "version": "0.2.0",
-  "description": "First trial UI theme",
+  "version": "0.1.0",
+  "description": "The theme that protects your eyes",
   "keywords": [
     "ui",
     "theme"
