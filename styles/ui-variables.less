@@ -1,40 +1,43 @@
+@git-add: rgb(202, 246, 197);
+@git-modified: rgb(159, 165, 246);
+@git-renamed: rgb(193, 200, 254);
+@git-removed:  rgb(255, 172, 172);
 
-// UI Variables
-// -------------------
 
-// These are the official UI variables that every UI theme should define.
-// It allows other packages to match your theme.
 
-// Overrides: atom/static/variables/ui-variables.less
+@main-bg: #1B2E3B;
+@main-text: #4D7B8C;
+@main-comment: #69818A;
+@main-brightness: #1B998B;
+@main-white: #C9CEC4;
 
-// Try to edit some of the values below to see your theme change.
-// A good start is to change the color of the `@base-background-color` variable.
-
+@dark-select: #0b1318;
+@light-text: #6396a9;
 
 // Text Colors
-@text-color:           hsl(0,0%,66%);
-@text-color-subtle:    hsl(0,0%,50%);
-@text-color-highlight: hsl(0,0%,94%);
-@text-color-selected:  hsl(0,0%,100%);
+@text-color:           @main-text;
+@text-color-subtle:    @main-text;
+@text-color-highlight:  @main-brightness;
+@text-color-selected:   @main-white;
 
-@text-color-info:    hsl(219,  79%, 66%);
-@text-color-success: hsl(140,  44%, 62%);
-@text-color-warning: hsl( 36,  60%, 72%);
-@text-color-error:   hsl(  9, 100%, 64%);
+@text-color-info:    @git-renamed; // text that download
+@text-color-success: @git-add;
+@text-color-warning: @git-renamed;
+@text-color-error:   @git-removed;
 
 // Background colors
-@background-color-info:    hsl(208, 100%, 50%);
-@background-color-success: hsl(160,  70%, 36%);
-@background-color-warning: hsl(32,   60%, 50%);
-@background-color-error:   hsl(0,    70%, 50%);
+@background-color-info:    @main-brightness;
+// @background-color-success: @git-add;
+@background-color-success: @main-brightness;
+@background-color-warning: yellow;
+@background-color-error:   red;
 
-@background-color-highlight: lighten(@base-background-color, 5%);
-@background-color-selected:  lighten(@base-background-color, 10%);
-@app-background-color:       darken(@base-background-color, 5%);
+@background-color-highlight: @light-text;
+@background-color-selected:  @dark-select;
+@app-background-color:      @dark-select;
 
-// Base colors
-@base-background-color: hsl(222,6%,22%);
-@base-border-color:     darken(@base-background-color, 8%);
+@base-background-color: darken(@main-bg, 2.5%);
+@base-border-color:     darken(@main-bg, 2.5%);
 
 // Component colors
 @pane-item-background-color: @base-background-color;
@@ -53,7 +56,7 @@
 @panel-heading-border-color:     @base-border-color;
 
 @overlay-background-color: lighten(@base-background-color, 5%);
-@overlay-border-color:     @base-border-color;
+@overlay-border-color:     red;
 
 @button-background-color:          lighten(@base-background-color, 10%);
 @button-background-color-hover:    lighten(@button-background-color, 12%);
@@ -70,11 +73,11 @@
 @tree-view-border-color:     @base-border-color;
 
 // Site colors
-@ui-site-color-1: hsl(208, 100%, 50%); // blue
-@ui-site-color-2: hsl(160,  70%, 42%); // green
-@ui-site-color-3: hsl(32,   60%, 50%); // orange
-@ui-site-color-4: #D831B0;             // pink
-@ui-site-color-5: #EBDD5B;             // yellow
+@ui-site-color-1: red; // blue
+@ui-site-color-2: violet; // green
+@ui-site-color-3: violet; // orange
+@ui-site-color-4: violet;             // pink
+@ui-site-color-5: violet;             // yellow
 
 // Sizes
 @font-size: 12px;
@@ -82,10 +85,10 @@
 
 @disclosure-arrow-size: 12px;
 
-@component-padding: 10px;
+@component-padding: 5px;
 @component-icon-padding: 5px;
-@component-icon-size: 16px;
-@component-line-height: 25px;
+@component-icon-size: 5px;
+@component-line-height: 20px;
 
 @tab-height: 30px;
 

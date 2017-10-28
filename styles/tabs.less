@@ -5,6 +5,10 @@
 // Displays selectable tabs above the editor.
 // Overrides: atom/tabs
 
+.left .pane > .tab-bar .tab {
+  max-width:  100% !important;
+}
+
 .tab-bar {
   background-color: @tab-bar-background-color;
   border-bottom: 1px solid @base-border-color;
@@ -16,6 +20,7 @@
     font-size: @font-size;
     border-right: 1px solid @tab-border-color;
     background-color: @tab-background-color;
+
     &.active {
       color: @text-color-selected;
       background-color: @tab-background-color-active;
