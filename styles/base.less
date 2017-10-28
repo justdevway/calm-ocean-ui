@@ -1,13 +1,3 @@
-
-// Base
-// -------------------
-
-// Used for global styles
-// Or to override certain Atom core styles
-
-// -------------------
-
-
 body {
   font-size: @font-size;
   color: @text-color;
@@ -16,6 +6,7 @@ body {
 
 atom-pane {
   border-right: 1px solid @base-border-color;
+
   &:last-child {
     border-right: none;
   }
@@ -23,4 +14,22 @@ atom-pane {
 
 .workspace {
   background-color: @main-bg;
+}
+
+atom-panel {
+  &.modal {
+    border: 1px solid @text-color-highlight !important;
+  }
+}
+
+atom-notification {
+  &.success {
+    .content {
+      background: @main-bg;
+    }
+
+    a {
+      color: @main-white;
+    }
+  }
 }
